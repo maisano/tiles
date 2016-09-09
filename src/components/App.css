@@ -1,0 +1,63 @@
+.container {
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 90px;
+  line-height: 0.3;
+  font-weight: 100;
+  color: white;
+}
+
+.boardContainer {
+  position: relative;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.menuToggle {
+  position: fixed;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: white;
+  text-align: center;
+  line-height: 40px;
+  font-family: monospace;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s ease-out;
+  transform: rotate(0deg);
+}
+
+.menuToggle.on {
+  background-color: black;
+  color: white;
+  transform: rotate(225deg);
+}
+
+.footer {
+  display: flex;
+  margin-top: 20px;
+  height: 40px;
+  font-size: 24px;
+}
+
+.moves,
+.button {
+  flex: 1 1;
+  text-align: center;
+  line-height: 40px;
+}
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

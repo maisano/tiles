@@ -1,0 +1,55 @@
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 40px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.96);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.25s ease-out,
+              transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+.overlay.isOpen {
+  pointer-events: all;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu {
+  max-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.thumbContainer {
+  margin-top: 20px;
+  position: relative;
+  max-width: 400px;
+  padding-top: 100%;
+}
+
+.thumb {
+  position: absolute;
+  top: 0;
+  width: 33%;
+  height: 33%;
+  margin: 1px 1px 2px;
+  background-size: contain;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.thumb.isSelected {
+  opacity: 0.5;
+}
+
+.bb {
+  margin-top: 20px;
+  text-align: center;
+}

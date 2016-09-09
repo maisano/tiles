@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  height: 40px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.option {
+  flex: 1 1;
+  cursor: pointer;
+  line-height: 40px;
+  text-align: center;
+}
+
+.option:hover {
+  background: #f7f7f7;
+}
+
+.option.isSelected {
+  background-color: #e5e5e5;
+}

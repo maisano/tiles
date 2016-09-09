@@ -1,0 +1,29 @@
+.board {
+  padding-top: 100%;
+  position: relative;
+}
+
+.tile {
+  border-radius: 2px;
+  position: absolute;
+  transition: transform 0.12s ease-in-out;
+}
+
+.hint {
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    outline: 0px solid rgba(255, 255, 255, 0);
+  }
+  50% {
+    outline: 3px solid rgba(255, 255, 255, 1);
+  }
+  100% {
+    outline: 0px solid rgba(255, 255, 255, 0);
+  }
+}
