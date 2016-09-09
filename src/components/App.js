@@ -163,6 +163,10 @@ class App extends React.Component {
             : 'game over bb. try again?';
           if (confirm(message)) { // eslint-disable-line
             this.newGame();
+          } else {
+            this.setState({
+              isPlayable: false,
+            });
           }
         }, 300);
       }
