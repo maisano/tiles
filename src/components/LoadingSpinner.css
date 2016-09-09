@@ -11,6 +11,7 @@
   border-right: 3px solid rgba(255, 255, 255, 0.2);
   border-bottom: 3px solid rgba(255, 255, 255, 0.2);
   border-left: 3px solid #ffffff;
+  pointer-events: none;
   opacity: 0;
   transition: opacity 0.2 ease-in-out;
   animation: spin 0.5s infinite linear;
