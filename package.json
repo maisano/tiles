@@ -29,6 +29,7 @@
     "build:prod": "npm run prebuild && rollup -c config/production.js",
     "build:dev": "npm run prebuild && rollup --watch -c config/development.js",
     "build:worker": "rollup -c config/worker.js",
+    "gh-pages": "git fetch origin && git checkout gh-pages && git reset --hard origin/gh-pages && git rebase origin/master --force-rebase && npm run build:prod && mv build/* ./ && git add . && git commit --amend --no-edit && git push origin gh-pages --force && git checkout master",
     "server": "http-server build/",
     "start": "concurrently --kill-others 'npm run build:dev' 'npm run server'"
   },
