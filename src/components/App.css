@@ -1,3 +1,8 @@
+:global body {
+  background-color: #d5d5d5;
+  font-family: 'Amatic SC', cursive;
+}
+
 .container {
   max-width: 460px;
   width: 100%;

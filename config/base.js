@@ -1,7 +1,11 @@
 import buble from 'rollup-plugin-buble';
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
-import css from 'modular-css/rollup';
+import postcss from 'rollup-plugin-postcss';
+import postcssModules from 'postcss-modules';
+import autoprefixer from 'autoprefixer';
+
+const cssExportMap = {};
 
 const defaults = {
   dest: 'build/app.js',
@@ -28,8 +32,18 @@ const plugins = [
     browser: true,
     main: true,
   }),
-  css({
-    css: 'build/index.css',
+  postcss({
+    plugins: [
+      autoprefixer(),
+      postcssModules({
+        getJSON(id, exportTokens) {
+          cssExportMap[id] = exportTokens;
+        },
+      }),
+    ],
+    getExport(id) {
+      return cssExportMap[id];
+    },
   }),
 ];
 
